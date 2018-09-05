@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-Yh-ltt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nps-Mr-qFC"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2Q-tk-myO">
+                                <rect key="frame" x="0.0" y="484" width="375" height="183"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KCl-tL-8kl">
+                                        <rect key="frame" x="17" y="15" width="303" height="152"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g8-dT-GoI">
+                                        <rect key="frame" x="328" y="7" width="32" height="32"/>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WwP-ph-B7G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="KCl-tL-8kl" firstAttribute="leading" secondItem="X2Q-tk-myO" secondAttribute="leading" constant="17" id="2hc-P3-9XZ"/>
+                                    <constraint firstItem="1g8-dT-GoI" firstAttribute="leading" secondItem="KCl-tL-8kl" secondAttribute="trailing" constant="8" id="E7r-LE-cvT"/>
+                                    <constraint firstItem="KCl-tL-8kl" firstAttribute="top" secondItem="X2Q-tk-myO" secondAttribute="top" constant="15" id="W8x-X1-XsO"/>
+                                    <constraint firstItem="1g8-dT-GoI" firstAttribute="top" secondItem="X2Q-tk-myO" secondAttribute="top" constant="7" id="aAt-ba-4L8"/>
+                                    <constraint firstAttribute="trailing" secondItem="1g8-dT-GoI" secondAttribute="trailing" constant="15" id="gFI-O1-y9Z"/>
+                                    <constraint firstAttribute="width" secondItem="X2Q-tk-myO" secondAttribute="height" multiplier="125:61" id="lt5-xT-oRU"/>
+                                    <constraint firstAttribute="bottom" secondItem="KCl-tL-8kl" secondAttribute="bottom" constant="16" id="tsf-lV-V4B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X2Q-tk-myO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0n2-lM-fCx"/>
+                            <constraint firstItem="vNd-Yh-ltt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="G2O-Jn-TOj"/>
+                            <constraint firstItem="vNd-Yh-ltt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WPP-hd-9zC"/>
+                            <constraint firstItem="vNd-Yh-ltt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aeA-dg-viL"/>
+                            <constraint firstItem="X2Q-tk-myO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qqe-bk-ou4"/>
+                            <constraint firstItem="X2Q-tk-myO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xge-kJ-AiA"/>
+                            <constraint firstItem="vNd-Yh-ltt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y7R-9F-0Yc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="1g8-dT-GoI" id="Ss1-53-gHy"/>
+                        <outlet property="mapViewObj" destination="vNd-Yh-ltt" id="04n-Xe-xtd"/>
+                        <outlet property="weatherInfoView" destination="X2Q-tk-myO" id="73Z-Mj-ReK"/>
+                        <outlet property="weatherMessage" destination="KCl-tL-8kl" id="itN-vA-kGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="32" height="32"/>
+    </resources>
+</document>
